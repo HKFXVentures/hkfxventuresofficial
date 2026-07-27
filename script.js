@@ -10,6 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Show success message after FormSubmit redirects back ---------- */
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('applied') === 'true') {
+    const successBox = document.getElementById('formSuccess');
+    if (successBox) {
+      successBox.classList.add('visible');
+      setTimeout(() => {
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+    // Clean the URL so refreshing doesn't keep showing the message
+    const cleanUrl = window.location.pathname + window.location.hash;
+    window.history.replaceState({}, document.title, cleanUrl);
+  }
+
   /* ---------- Scroll progress bar ---------- */
   const scrollProgress = document.getElementById('scrollProgress');
   function updateScrollProgress() {
@@ -175,9 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.getElementById('formSuccess');
 
   if (enrollForm) {
-    enrollForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
+    enrollForm.addEventListener('submit', (e) => {
       let valid = true;
       enrollForm.querySelectorAll('[required]').forEach(input => {
         const field = input.closest('.field');
@@ -193,34 +206,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (!valid) {
+        e.preventDefault();
         enrollForm.querySelector('.invalid input, .invalid select, .invalid textarea')?.focus();
         return;
       }
 
+      // Let the browser submit the form normally to FormSubmit.
+      // This is intentional: FormSubmit needs a real page navigation (not a
+      // hidden background request) to reliably trigger its one-time email
+      // activation step and to show its own confirmation/error page.
       submitBtn.classList.add('is-loading');
       submitBtn.disabled = true;
-
-      try {
-        const formData = new FormData(enrollForm);
-        const response = await fetch(enrollForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          formSuccess.classList.add('visible');
-          enrollForm.reset();
-          formSuccess.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
-        } else {
-          alert('Something went wrong sending your application. Please try again or contact us on WhatsApp.');
-        }
-      } catch (err) {
-        alert('Something went wrong sending your application. Please check your connection and try again.');
-      } finally {
-        submitBtn.classList.remove('is-loading');
-        submitBtn.disabled = false;
-      }
     });
   }
 
