@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HK FX Ventures | Founder-Led Forex Mentorship by Haider Khan</title>
+<meta name="description" content="HK FX Ventures is a disciplined forex mentorship programme led by Haider Khan. Structured education, risk management and live market analysis for 50 committed traders.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Cursor glow (desktop only, injected via JS) -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner container">
+    <a href="#home" class="logo">
+      <span class="logo-mark">HK<span class="logo-dot">.</span>FX</span>
+      <span class="logo-sub">VENTURES</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#mentorship">Mentorship</a>
+      <a href="#journal">Trading Journal</a>
+      <a href="#results">Results</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#enroll" class="btn btn-primary btn-small">Apply Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <canvas id="candleCanvas" class="hero-canvas"></canvas>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-vignette"></div>
+
+  <div class="container hero-inner reveal">
+    <p class="eyebrow"><span class="eyebrow-dot"></span> Founder-led mentorship &middot; 50 seats only</p>
+    <h1 class="hero-title">
+      MASTER THE MARKETS.<br>
+      <span class="text-accent">BUILD YOUR FREEDOM.</span>
+    </h1>
+    <p class="hero-sub">
+      Helping disciplined traders master the markets through structured education,
+      risk management, and practical market experience.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#enroll" class="btn btn-primary">Join the 50 Traders</a>
+      <a href="#about" class="btn btn-ghost">Learn More <i class="fa-solid fa-arrow-down"></i></a>
+    </div>
+
+    <div class="hero-stats reveal-stagger">
+      <div class="hero-stat-card">
+        <i class="fa-solid fa-users"></i>
+        <span class="hero-stat-value">50</span>
+        <span class="hero-stat-label">Traders Only</span>
+      </div>
+      <div class="hero-stat-card">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span class="hero-stat-value">Forex</span>
+        <span class="hero-stat-label">Education</span>
+      </div>
+      <div class="hero-stat-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span class="hero-stat-value">Risk</span>
+        <span class="hero-stat-label">Management First</span>
+      </div>
+      <div class="hero-stat-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <span class="hero-stat-value">Live</span>
+        <span class="hero-stat-label">Market Analysis</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ===================== CEO ===================== -->
+<section class="ceo-section">
+  <div class="container ceo-inner reveal">
+    <div class="ceo-photo-wrap">
+      <div class="ceo-photo-ring"></div>
+      <img class="ceo-photo" src="https://placehold.co/420x420/121212/E53935?text=HK&font=poppins" alt="Haider Khan, Founder and CEO of HK FX Ventures">
+    </div>
+    <div class="ceo-text">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> The Founder</p>
+      <h2 class="ceo-name">Haider Khan</h2>
+      <p class="ceo-title">Founder &amp; CEO, HK FX Ventures</p>
+      <blockquote class="ceo-quote">
+        "My mission is to help traders build consistency through discipline, patience,
+        proper risk management, and structured education rather than unrealistic promises."
+      </blockquote>
+      <div class="ceo-socials">
+        <a href="https://wa.me/923323968633" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://instagram.com/hkfxventures" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/@hkfxventures" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://facebook.com/FXHadi" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> About Us</p>
+      <h2 class="section-title">Built on discipline, not hype</h2>
+      <p class="section-lead">
+        HK FX Ventures is a founder-led forex mentorship house. We exist to replace guesswork
+        with process &mdash; giving a small, committed group of traders the structure that
+        institutions have always used, and retail traders rarely get taught.
+      </p>
+    </div>
+
+    <div class="glass-grid reveal-stagger">
+      <div class="glass-card">
+        <div class="glass-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>Who We Are</h3>
+        <p>A tight-knit mentorship group led directly by Haider Khan, built around real
+          accountability rather than open-ended courses that end when the payment clears.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-icon"><i class="fa-solid fa-compass"></i></div>
+        <h3>Our Mission</h3>
+        <p>To turn undisciplined trading into a repeatable process &mdash; through structured
+          education, strict risk controls, and consistent journaling.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>A community of 50 traders who treat the markets like a profession: patient,
+          data-driven, and unemotional about individual trades.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h3>Core Values</h3>
+        <p>Discipline over excitement. Risk management before profit targets. Honesty about
+          losses. No signals, no guarantees &mdash; only process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT YOU'LL LEARN ===================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Curriculum</p>
+      <h2 class="section-title">What you'll learn</h2>
+      <p class="section-lead">Ten pillars, taught in order, revisited every week until they're second nature.</p>
+    </div>
+
+    <div class="learn-grid reveal-stagger" id="learnGrid">
+      <!-- Filled by JS-friendly static markup -->
+      <div class="learn-card"><span class="learn-index">01</span><i class="fa-solid fa-diagram-project"></i><h4>Market Structure</h4></div>
+      <div class="learn-card"><span class="learn-index">02</span><i class="fa-solid fa-droplet"></i><h4>Liquidity</h4></div>
+      <div class="learn-card"><span class="learn-index">03</span><i class="fa-solid fa-arrows-left-right-to-line"></i><h4>Supply &amp; Demand</h4></div>
+      <div class="learn-card"><span class="learn-index">04</span><i class="fa-solid fa-chart-simple"></i><h4>Price Action</h4></div>
+      <div class="learn-card"><span class="learn-index">05</span><i class="fa-solid fa-brain"></i><h4>Trading Psychology</h4></div>
+      <div class="learn-card"><span class="learn-index">06</span><i class="fa-solid fa-shield-halved"></i><h4>Risk Management</h4></div>
+      <div class="learn-card"><span class="learn-index">07</span><i class="fa-solid fa-sack-dollar"></i><h4>Money Management</h4></div>
+      <div class="learn-card"><span class="learn-index">08</span><i class="fa-solid fa-bolt"></i><h4>Trade Execution</h4></div>
+      <div class="learn-card"><span class="learn-index">09</span><i class="fa-solid fa-book"></i><h4>Journaling</h4></div>
+      <div class="learn-card"><span class="learn-index">10</span><i class="fa-solid fa-satellite-dish"></i><h4>Live Analysis</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MENTORSHIP ===================== -->
+<section class="section mentorship" id="mentorship">
+  <div class="container mentorship-inner">
+    <div class="mentorship-text reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Exclusive Cohort</p>
+      <h2 class="section-title">Join the Founding 50 Traders</h2>
+      <p class="section-lead">
+        This isn't an open course. It's a capped mentorship &mdash; deliberately small so every
+        trader gets real attention.
+      </p>
+
+      <ul class="mentorship-list">
+        <li><i class="fa-solid fa-calendar-week"></i> Weekly mentorship sessions</li>
+        <li><i class="fa-solid fa-video"></i> Live trading sessions</li>
+        <li><i class="fa-solid fa-people-group"></i> Private community support</li>
+        <li><i class="fa-solid fa-user-tie"></i> Direct, private mentorship access</li>
+      </ul>
+
+      <a href="#enroll" class="btn btn-primary">Apply for Enrollment</a>
+    </div>
+
+    <div class="mentorship-visual reveal">
+      <div class="seat-ring-wrap">
+        <svg class="seat-ring" viewBox="0 0 220 220">
+          <circle class="seat-ring-track" cx="110" cy="110" r="96"></circle>
+          <circle class="seat-ring-fill" id="seatRingFill" cx="110" cy="110" r="96"></circle>
+        </svg>
+        <div class="seat-ring-center">
+          <span class="seat-ring-num" id="seatsFilledNum">0</span>
+          <span class="seat-ring-slash">/ 50</span>
+          <span class="seat-ring-label">Seats Filled</span>
+        </div>
+      </div>
+      <p class="seats-remaining"><span id="seatsRemaining">17</span> seats remaining &mdash; applications reviewed weekly</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ENROLLMENT FORM ===================== -->
+<section class="section section-alt" id="enroll">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Application</p>
+      <h2 class="section-title">Apply for enrollment</h2>
+      <p class="section-lead">Every application is reviewed personally. Incomplete applications are not considered.</p>
+    </div>
+
+    <form class="form-card reveal" id="enrollForm" action="https://formsubmit.co/your-email@example.com" method="POST" novalidate>
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="New HK FX Ventures Application">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="Full Name" required placeholder="e.g. Ahmed Raza">
+          <span class="field-error">Please enter your full name.</span>
+        </div>
+        <div class="field">
+          <label for="country">Country</label>
+          <input type="text" id="country" name="Country" required placeholder="e.g. Pakistan">
+          <span class="field-error">Please enter your country.</span>
+        </div>
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="Age" min="16" max="99" required placeholder="e.g. 24">
+          <span class="field-error">Please enter a valid age (16+).</span>
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender" name="Gender" required>
+            <option value="" disabled selected>Select one</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Prefer not to say</option>
+          </select>
+          <span class="field-error">Please select an option.</span>
+        </div>
+        <div class="field">
+          <label for="experience">Trading Experience</label>
+          <select id="experience" name="Trading Experience" required>
+            <option value="" disabled selected>Select one</option>
+            <option>Complete beginner</option>
+            <option>Under 1 year</option>
+            <option>1&ndash;3 years</option>
+            <option>3+ years</option>
+          </select>
+          <span class="field-error">Please select your experience level.</span>
+        </div>
+        <div class="field">
+          <label for="phone">Contact Number</label>
+          <input type="tel" id="phone" name="Contact Number" required placeholder="e.g. 0332 3968633">
+          <span class="field-error">Please enter a valid contact number.</span>
+        </div>
+        <div class="field field-full">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="Email Address" required placeholder="you@example.com">
+          <span class="field-error">Please enter a valid email address.</span>
+        </div>
+        <div class="field field-full">
+          <label for="reason">Why do you want to join?</label>
+          <textarea id="reason" name="Why do you want to join" rows="4" required placeholder="Tell us about your goals and commitment level..."></textarea>
+          <span class="field-error">Please tell us why you'd like to join.</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+        <span class="btn-text">Submit Application</span>
+        <span class="btn-spinner"></span>
+      </button>
+
+      <p class="form-note"><i class="fa-solid fa-lock"></i> Your information is sent securely and is never stored in this page's code.</p>
+
+      <div class="form-success" id="formSuccess">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>Thank you! Your application has been submitted successfully. We will contact you after reviewing your application.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== TRADING JOURNAL ===================== -->
+<section class="section" id="journal">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Inside the Mentorship</p>
+      <h2 class="section-title">Trading journal dashboard</h2>
+      <p class="section-lead">Every trader logs every trade. This is the standard we hold the cohort to.</p>
+    </div>
+
+    <div class="journal-table-wrap reveal">
+      <table class="journal-table">
+        <thead>
+          <tr>
+            <th>#</th><th>Pair</th><th>Side</th><th>Entry</th><th>SL</th><th>TP</th>
+            <th>Risk %</th><th>RR</th><th>Result</th><th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="journalBody">
+          <tr>
+            <td>001</td><td>EUR/USD</td><td class="side-buy">Buy</td><td>1.0842</td><td>1.0812</td><td>1.0912</td>
+            <td>1.0%</td><td>2.3R</td><td class="result-win">+2.3R</td><td>Waited for confirmation &mdash; textbook entry.</td>
+          </tr>
+          <tr>
+            <td>002</td><td>GBP/JPY</td><td class="side-sell">Sell</td><td>198.40</td><td>198.90</td><td>197.10</td>
+            <td>0.8%</td><td>2.6R</td><td class="result-loss">&minus;1R</td><td>Entered early, before structure confirmed.</td>
+          </tr>
+          <tr>
+            <td>003</td><td>XAU/USD</td><td class="side-buy">Buy</td><td>2,318.5</td><td>2,309.0</td><td>2,347.0</td>
+            <td>1.2%</td><td>3.0R</td><td class="result-win">+3.0R</td><td>Followed plan exactly, no emotion.</td>
+          </tr>
+          <tr>
+            <td>004</td><td>USD/CAD</td><td class="side-sell">Sell</td><td>1.3720</td><td>1.3752</td><td>1.3660</td>
+            <td>1.0%</td><td>1.9R</td><td class="result-breakeven">BE</td><td>Moved SL to entry after partials.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="journal-note"><i class="fa-solid fa-camera"></i> Full trader dashboards inside the mentorship include screenshot uploads and psychology notes per trade.</p>
+  </div>
+</section>
+
+<!-- ===================== RESULTS ===================== -->
+<section class="section section-alt" id="results">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Track Record</p>
+      <h2 class="section-title">Results, tracked openly</h2>
+      <p class="section-lead">Numbers we hold ourselves accountable to &mdash; updated monthly.</p>
+    </div>
+
+    <div class="results-grid reveal-stagger">
+      <div class="result-card">
+        <span class="result-value" data-count="620">0</span>
+        <span class="result-label">Trades Taken</span>
+      </div>
+      <div class="result-card">
+        <span class="result-value" data-count="64" data-suffix="%">0</span>
+        <span class="result-label">Winning Percentage</span>
+      </div>
+      <div class="result-card">
+        <span class="result-value" data-count="2.4" data-decimal="1" data-suffix="R">0</span>
+        <span class="result-label">Average RR</span>
+      </div>
+      <div class="result-card">
+        <span class="result-value" data-count="91" data-suffix="%">0</span>
+        <span class="result-label">Risk Management Score</span>
+      </div>
+      <div class="result-card">
+        <span class="result-value" data-count="8.6" data-decimal="1" data-suffix="%">0</span>
+        <span class="result-label">Monthly Growth</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Trader Voices</p>
+      <h2 class="section-title">What the cohort says</h2>
+    </div>
+
+    <div class="testimonial-grid reveal-stagger">
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"The risk management framework alone changed how I trade. I stopped blowing accounts within the first month."</p>
+        <div class="testimonial-person">
+          <img src="https://placehold.co/56x56/121212/E53935?text=BA" alt="">
+          <div><strong>Bilal A.</strong><span>Cohort Trader</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p>"No hype, no signal-selling. Just structure, journaling, and weekly accountability. Exactly what I needed."</p>
+        <div class="testimonial-person">
+          <img src="https://placehold.co/56x56/121212/E53935?text=SN" alt="">
+          <div><strong>Sana N.</strong><span>Cohort Trader</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+        <p>"Haider actually reviews your trades. That level of attention is rare at this price point."</p>
+        <div class="testimonial-person">
+          <img src="https://placehold.co/56x56/121212/E53935?text=UT" alt="">
+          <div><strong>Usman T.</strong><span>Cohort Trader</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section section-alt" id="faq">
+  <div class="container container-narrow">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Questions</p>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+
+    <div class="accordion reveal" id="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          Who can join?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-panel">
+          <p>Anyone genuinely committed to treating trading as a skill to be built over time
+            &mdash; not looking for quick signals or guaranteed returns.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          Is prior experience required?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-panel">
+          <p>No. We teach from market structure upward. What matters more than experience
+            is discipline and willingness to follow a process.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          Is mentorship online?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-panel">
+          <p>Yes. All sessions, live analysis, and community access are delivered online so
+            traders anywhere can join the cohort.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          How long is the programme?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-panel">
+          <p>The core mentorship runs over several months, with ongoing community access
+            for the founding cohort after completion.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          Is there a seat limit?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-panel">
+          <p>Yes &mdash; strictly 50 seats for the founding cohort, so mentorship stays personal
+            rather than turning into a mass course.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> Get In Touch</p>
+      <h2 class="section-title">Contact HK FX Ventures</h2>
+    </div>
+
+    <div class="contact-grid reveal-stagger">
+      <div class="contact-info">
+        <a class="contact-link" href="https://wa.me/923323968633" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div><strong>WhatsApp</strong><span>0332 3968633</span></div>
+        </a>
+        <a class="contact-link" href="https://tiktok.com/@hkfxventures" target="_blank" rel="noopener">
+          <i class="fa-brands fa-tiktok"></i>
+          <div><strong>TikTok</strong><span>@hkfxventures</span></div>
+        </a>
+        <a class="contact-link" href="https://instagram.com/hkfxventures" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+          <div><strong>Instagram</strong><span>@hkfxventures</span></div>
+        </a>
+        <a class="contact-link" href="https://facebook.com/FXHadi" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook"></i>
+          <div><strong>Facebook</strong><span>FXHadi</span></div>
+        </a>
+        <a class="contact-link" href="mailto:info@hkfxventures.com">
+          <i class="fa-solid fa-envelope"></i>
+          <div><strong>Email</strong><span>info@hkfxventures.com</span></div>
+        </a>
+
+        <div class="business-hours">
+          <h4><i class="fa-solid fa-clock"></i> Business Hours</h4>
+          <ul>
+            <li><span>Monday &ndash; Friday</span><span>10:00 &ndash; 20:00</span></li>
+            <li><span>Saturday</span><span>12:00 &ndash; 18:00</span></li>
+            <li><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps?q=Islamabad,Pakistan&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="HK FX Ventures location"></iframe>
+      </div>
+    </div>
+
+    <form class="form-card reveal" action="https://formsubmit.co/your-email@example.com" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New Contact Message - HK FX Ventures">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <div class="form-grid">
+        <div class="field">
+          <label for="cName">Name</label>
+          <input type="text" id="cName" name="Name" required>
+        </div>
+        <div class="field">
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" name="Email" required>
+        </div>
+        <div class="field field-full">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" name="Message" rows="4" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">HK<span class="logo-dot">.</span>FX</span>
+      <p>Founder: Haider Khan</p>
+      <div class="ceo-socials footer-socials">
+        <a href="https://wa.me/923323968633" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://instagram.com/hkfxventures" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/@hkfxventures" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://facebook.com/FXHadi" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#mentorship">Mentorship</a>
+      <a href="#journal">Trading Journal</a>
+      <a href="#results">Results</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-legal">
+      <h4>Risk Disclosure</h4>
+      <p>Trading forex carries substantial risk of loss. Past results shown are illustrative
+        of cohort activity and do not guarantee future performance.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> HK FX Ventures. All rights reserved.</p>
+    <p class="footer-tagline">Trade Smart. Manage Risk. Stay Consistent.</p>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING BUTTONS ===================== -->
+<a href="https://wa.me/923323968633" target="_blank" rel="noopener" class="float-btn whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+<button class="float-btn back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
